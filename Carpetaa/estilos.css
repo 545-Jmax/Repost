@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* 3. Contenedor galería con fondo rgba transparente */
+/* 4. Imagen de fondo con background */
+/* 5. Posición del fondo con background-position */
+/* 6. Tamaño del fondo con background-size */
+/* 7. Efecto de desplazamiento con background-attachment */
+/* 16. Unidades vh y vw para altura y ancho */
+.galeria {
+    background: rgba(200, 200, 200, 0.5);
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?w=800');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.galeria > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    border: 2px solid #000;
+    /* 14. Uso de em para márgenes y paddings */
+    padding: 1.25em;
+    margin: 0.9375em 0;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+/* 1. Card con color hexadecimal */
+.card-hex {
+    background-color: #FF6B6B;
+}
+
+/* 2. Cards con colores RGB */
+.card-rgb1 {
+    background-color: rgb(255, 99, 71);
+}
+
+.card-rgb2 {
+    background-color: rgb(100, 149, 237);
+}
+
+.card-rgb3 {
+    background-color: rgb(144, 238, 144);
+}
+
+.card-rgb4 {
+    background-color: rgb(186, 85, 211);
+    color: white;
+}
+
+.card-rgb5 {
+    background-color: rgb(255, 165, 0);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    /* 12. Tamaño, estilo y peso de fuente */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card p {
+    /* 13. Uso de rem en los párrafos */
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* 8. Gradiente lineal */
+.card-gradiente-lineal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: white;
+}
+
+/* 9. Gradiente radial */
+.card-gradiente-radial {
+    background: radial-gradient(circle, #ff6b6b 0%, #c92a2a 50%, #5f3dc4 100%);
+    color: white;
+}
+
+/* 10. Estilos de texto */
+.card-texto-estilizado {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.card-texto-estilizado h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+
+.card-texto-estilizado p {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+/* 15. Comparación de unidades px, em y rem */
+.card-unidades {
+    background-color: #ecf0f1;
+    font-size: 16px; /* Base para em */
+}
+
+.texto-px {
+    font-size: 16px; /* Tamaño fijo, no se escala */
+    margin-bottom: 0.5em;
+}
+
+.texto-em {
+    font-size: 1em; /* 1em = 16px (relativo al padre .card-unidades) */
+    margin-bottom: 0.5em;
+}
+
+.texto-rem {
+    font-size: 1rem; /* 1rem = 16px (relativo al root html) */
+    margin-bottom: 0.5em;
+}
+
+/* 17 y 18. Imágenes con redimensionamiento y object-fit */
+.card-imagen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta la imagen manteniendo proporción */
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.card-imagen-responsive {
+    background-color: #f8f9fa;
+}
+
+.img-responsive {
+    max-width: 100%; /* Se adapta al contenedor */
+    height: auto; /* Mantiene proporción original */
+    display: block;
+    margin: 0.5em 0;
+    border-radius: 5px;
+}
+
+/* 
+EXPLICACIÓN DE DIFERENCIAS ENTRE UNIDADES (Requisito 15):
+
+- px (píxeles): Unidad absoluta y fija. No se escala con el tamaño de fuente.
+  Ejemplo: 16px siempre será 16px sin importar el contexto.
+
+- em: Unidad relativa al tamaño de fuente del elemento PADRE.
+  Ejemplo: Si el padre tiene font-size: 20px, entonces 1em = 20px.
+  Se acumula en elementos anidados (puede causar problemas).
+
+- rem (root em): Unidad relativa al tamaño de fuente del elemento ROOT (html).
+  Ejemplo: Si html tiene font-size: 16px, entonces 1rem = 16px en toda la página.
+  NO se acumula, más predecible y fácil de mantener.
+
+- vh (viewport height): 1vh = 1% de la altura de la ventana del navegador.
+  Ejemplo: 100vh = altura completa de la pantalla.
+
+- vw (viewport width): 1vw = 1% del ancho de la ventana del navegador.
+  Ejemplo: 100vw = ancho completo de la pantalla.
+
+DIFERENCIAS PRÁCTICAS:
+- Usa px para valores fijos (bordes, sombras pequeñas)
+- Usa rem para fuentes y espaciados (mejor accesibilidad)
+- Usa em para espaciados que deben escalar con el texto del elemento
+- Usa vh/vw para layouts de pantalla completa
+*/

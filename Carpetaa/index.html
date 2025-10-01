@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galería</title>
+    <!-- 11. Fuente personalizada de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<link rel="stylesheet" href="estilos.css">
 <body>
-    
-    
+    <div class="galeria">
+        <p>Lorem ipsum dolor sit amet consectetur. Nam, inventore.</p>
+        
+        <!-- Card 1 - Color Hexadecimal -->
+        <div class="card card-hex">
+            <h3>Card Hexadecimal</h3>
+            <p>Color: #FF6B6B</p>
+        </div>
+
+        <!-- Card 2 - Color RGB -->
+        <div class="card card-rgb1">
+            <h3>Card rojo</h3>
+            <p>RGB: 255, 99, 71</p>
+        </div>
+
+        <!-- Card 3 - Color RGB -->
+        <div class="card card-rgb2">
+            <h3>Card azul</h3>
+            <p>RGB: 100, 149, 237</p>
+        </div>
+
+        <!-- Card 4 - Color RGB -->
+        <div class="card card-rgb3">
+            <h3>Card verde</h3>
+            <p>RGB: 144, 238, 144</p>
+        </div>
+
+        <!-- Card 5 - Color RGB -->
+        <div class="card card-rgb4">
+            <h3>Card morado</h3>
+            <p>RGB: 186, 85, 211</p>
+        </div>
+
+        <!-- Card 6 - Color RGB -->
+        <div class="card card-rgb5">
+            <h3>Card naranja</h3>
+            <p>RGB: 255, 165, 0</p>
+        </div>
+
+        <!-- Card 7 - Gradiente Lineal -->
+        <div class="card card-gradiente-lineal">
+            <h3>Card Gradiente Lineal</h3>
+            <p>De púrpura a rosa</p>
+        </div>
+
+        <!-- Card 8 - Gradiente Radial -->
+        <div class="card card-gradiente-radial">
+            <h3>Card Gradiente Radial</h3>
+            <p>Desde el centro</p>
+        </div>
+
+        <!-- Card 9 - Estilos de texto -->
+        <div class="card card-texto-estilizado">
+            <h3>Card con Efectos de Texto</h3>
+            <p>Texto transformado y con sombra</p>
+        </div>
+
+        <!-- Card 10 - Comparación de unidades -->
+        <div class="card card-unidades">
+            <h3>Comparación de Unidades</h3>
+            <p class="texto-px">Texto con px (16px) - Tamaño fijo</p>
+            <p class="texto-em">Texto con em (1em) - Relativo al padre</p>
+            <p class="texto-rem">Texto con rem (1rem) - Relativo al root</p>
+        </div>
+
+        <!-- Card 11 - Imagen con object-fit -->
+        <div class="card card-imagen">
+            <h3>Card con Imagen</h3>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Montañas">
+            <p>Imagen con object-fit: cover</p>
+        </div>
+
+        <!-- Card 12 - Imagen responsiva -->
+        <div class="card card-imagen-responsive">
+            <h3>Imagen Responsiva</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Naturaleza" class="img-responsive">
+            <p>Con max-width y height: auto</p>
+        </div>
+    </div>
 </body>
 </html>
