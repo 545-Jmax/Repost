@@ -1,94 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería</title>
-    <!-- 11. Fuente personalizada de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Escenarios CSS - Grupos A-F</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="galeria">
-        <p>Lorem ipsum dolor sit amet consectetur. Nam, inventore.</p>
-        
-        <!-- Card 1 - Color Hexadecimal -->
-        <div class="card card-hex">
-            <h3>Card Hexadecimal</h3>
-            <p>Color: #FF6B6B</p>
-        </div>
+    <nav class="navbar">
+        <a href="#grupo-a">Grupo A</a>
+        <a href="#grupo-b">Grupo B</a>
+        <a href="#grupo-c">Grupo C</a>
+        <a href="#grupo-d">Grupo D</a>
+        <a href="#grupo-e">Grupo E</a>
+        <a href="#grupo-f">Grupo F</a>
+    </nav>
 
-        <!-- Card 2 - Color RGB -->
-        <div class="card card-rgb1">
-            <h3>Card rojo</h3>
-            <p>RGB: 255, 99, 71</p>
-        </div>
+    <header>
+        <h1>Escenarios CSS Interactivos</h1>
+        <p>Seis módulos demostrativos con pseudoclases, pseudoelementos, variables y posicionamiento.</p>
+    </header>
 
-        <!-- Card 3 - Color RGB -->
-        <div class="card card-rgb2">
-            <h3>Card azul</h3>
-            <p>RGB: 100, 149, 237</p>
-        </div>
+    <main>
+        <section id="grupo-a" class="card">
+            <h2>Grupo A – Botones (:hover y ::after)</h2>
+            <button class="btn-demo" type="button">Descubrir efecto</button>
+            <div class="code-notes">
+                <ul>
+                    <li>Pseudoclase <code>:hover</code> aplicada al botón</li>
+                    <li>Pseudoelemento <code>::after</code> como sombra</li>
+                </ul>
+            </div>
+        </section>
 
-        <!-- Card 4 - Color RGB -->
-        <div class="card card-rgb3">
-            <h3>Card verde</h3>
-            <p>RGB: 144, 238, 144</p>
-        </div>
+        <section id="grupo-b" class="card">
+            <h2>Grupo B – Formularios (:invalid, :type, :focus, ::before)</h2>
+            <form class="form-demo" novalidate>
+                <div class="form-field">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Introduce tu nombre" required>
+                </div>
+                <div class="form-field icon-email">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos más"></textarea>
+                </div>
+                <span class="field-hint">* Campos con validación nativa</span>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
-        <!-- Card 5 - Color RGB -->
-        <div class="card card-rgb4">
-            <h3>Card morado</h3>
-            <p>RGB: 186, 85, 211</p>
-        </div>
+        <section id="grupo-c" class="card">
+            <h2 class="titulo-icono">Grupo C – Estructura y contenido</h2>
+            <div class="texto-demo">
+                <p>Primer párrafo con estilos especiales.</p>
+                <p>Segundo párrafo con formato estándar.</p>
+                <span class="solo">Elemento único dentro del contenedor.</span>
+                <blockquote>La creatividad es la inteligencia divirtiéndose.</blockquote>
+            </div>
+        </section>
 
-        <!-- Card 6 - Color RGB -->
-        <div class="card card-rgb5">
-            <h3>Card naranja</h3>
-            <p>RGB: 255, 165, 0</p>
-        </div>
+        <section id="grupo-d" class="card">
+            <h2>Grupo D – Variables y temas</h2>
+            <div class="acciones-tema">
+                <button type="button" data-theme="light">Tema claro</button>
+                <button type="button" data-theme="dark">Tema oscuro</button>
+                <button type="button" data-theme="fallback">Modo fallback</button>
+            </div>
+            <div class="variable-demo">
+                <div class="tarjeta-local">
+                    <h3>Variables locales</h3>
+                    <p>Esta tarjeta redefine variables en su ámbito.</p>
+                </div>
+                <div class="tarjeta-fallback">
+                    <p>Ejemplo de <code>var(--color-desconocido, fallback)</code>.</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Card 7 - Gradiente Lineal -->
-        <div class="card card-gradiente-lineal">
-            <h3>Card Gradiente Lineal</h3>
-            <p>De púrpura a rosa</p>
-        </div>
+        <section id="grupo-e" class="card">
+            <h2>Grupo E – Navegación (:target, :hover, fixed)</h2>
+            <nav class="subnav">
+                <a href="#mensaje-extra">Mensajes</a>
+                <a href="#grupo-a">Volver a botones</a>
+            </nav>
+            <div class="target-demo">
+                <div id="mensaje-extra" class="panel-target">
+                    <h3>Mensaje activado con :target (Pato Pato)</h3>
+                    <p>Este panel aparece cuando su ID coincide con la URL.</p>
+                    <a class="cerrar-target" href="#grupo-e">Cerrar mensaje</a>
+                </div>
+            </div>
+        </section>
 
-        <!-- Card 8 - Gradiente Radial -->
-        <div class="card card-gradiente-radial">
-            <h3>Card Gradiente Radial</h3>
-            <p>Desde el centro</p>
-        </div>
+        <section id="grupo-f" class="card">
+            <h2>Grupo F – Posicionamiento y capas</h2>
+            <div class="posicionamiento-demo">
+                <div class="imagen-relativa">Imagen</div>
+                <div class="tarjeta-posicion">
+                    <button class="btn-cerrar" type="button">×</button>
+                    <h3>Tarjeta con botón flotante</h3>
+                    <p>Botón posicionado con <code>position: absolute</code>.</p>
+                </div>
+                <div class="cajas-z">
+                    <div class="caja caja-frontal"></div>
+                    <div class="caja caja-fondo"></div>
+                </div>
+                <div class="centrado-absoluto">
+                    <div class="card-centrada">
+                        <h3>Card centrada</h3>
+                        <p>Centrada mediante transformaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <!-- Card 9 - Estilos de texto -->
-        <div class="card card-texto-estilizado">
-            <h3>Card con Efectos de Texto</h3>
-            <p>Texto transformado y con sombra</p>
-        </div>
+    <footer>
+        <p>CSS Playground • Pseudoclases, Pseudoelementos, Variables y Posicionamiento</p>
+    </footer>
 
-        <!-- Card 10 - Comparación de unidades -->
-        <div class="card card-unidades">
-            <h3>Comparación de Unidades</h3>
-            <p class="texto-px">Texto con px (16px) - Tamaño fijo</p>
-            <p class="texto-em">Texto con em (1em) - Relativo al padre</p>
-            <p class="texto-rem">Texto con rem (1rem) - Relativo al root</p>
-        </div>
+    <script>
+        const themeButtons = document.querySelectorAll('[data-theme]');
+        const body = document.body;
 
-        <!-- Card 11 - Imagen con object-fit -->
-        <div class="card card-imagen">
-            <h3>Card con Imagen</h3>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Montañas">
-            <p>Imagen con object-fit: cover</p>
-        </div>
+        const setTheme = (theme) => {
+            body.classList.remove('theme-dark', 'theme-fallback');
+            if (theme === 'dark') {
+                body.classList.add('theme-dark');
+            } else if (theme === 'fallback') {
+                body.classList.add('theme-fallback');
+            }
+        };
 
-        <!-- Card 12 - Imagen responsiva -->
-        <div class="card card-imagen-responsive">
-            <h3>Imagen Responsiva</h3>
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Naturaleza" class="img-responsive">
-            <p>Con max-width y height: auto</p>
-        </div>
-    </div>
+        themeButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                setTheme(btn.dataset.theme);
+            });
+        });
+    </script>
 </body>
 </html>
