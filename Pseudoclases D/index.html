@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Pseudoclases</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header" id="inicio">
+        <div class="brand" aria-label="Inicio">
+            <span class="brand__mark">P</span>
+            <span class="brand__name">Pseudoclases Digital</span>
+        </div>
+        <nav class="site-nav" aria-label="Principal">
+            <ul class="site-nav__list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <h1 id="hero-title">Haz crecer tu presencia web con estilo</h1>
+                <p>Diseñamos experiencias digitales usando solo la magia de las pseudoclases, la semántica y la creatividad.</p>
+                <a class="cta" href="#contacto">Agenda una llamada</a>
+            </div>
+        </section>
+
+        <section class="section" id="servicios" aria-labelledby="servicios-title">
+            <h2 class="section-title" id="servicios-title">Nuestros servicios</h2>
+            <div class="cards">
+                <article class="card" aria-labelledby="card1-title">
+                    <h3 class="card__title" id="card1-title">Branding coherente</h3>
+                    <p>Paletas audaces, contrastes calculados y tipografía equilibrada para destacar tu identidad.</p>
+                </article>
+                <article class="card" aria-labelledby="card2-title">
+                    <h3 class="card__title" id="card2-title">Optimización semántica</h3>
+                    <p>Etiquetado accesible y ordenado para mejorar posicionamiento y comprensión.</p>
+                </article>
+                <article class="card" aria-labelledby="card3-title">
+                    <h3 class="card__title" id="card3-title">Experiencias interactivas</h3>
+                    <p>Animaciones suaves y estados adaptativos a cada interacción del usuario.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+            <h2 class="section-title" id="experiencia-title">Experiencia destacada</h2>
+            <article class="case-study" aria-labelledby="case-title">
+                <h3 class="case-study__title" id="case-title">Caso de éxito: Aurora Café</h3>
+                <p>Incrementamos en un 56% el tiempo de permanencia gracias a un hero con `position: relative` y elementos flotantes absolutos que capturan la atención.</p>
+                <aside class="highlight" aria-label="Dato curioso">
+                    <h4>Dato Curioso</h4>
+                    <p>El banner fijo superior generó un 24% más de clics en llamadas a la acción.</p>
+                </aside>
+            </article>
+            <div class="floating-note" aria-hidden="true">crece contigo</div>
+        </section>
+
+        <section class="section section--contact" id="contacto" aria-labelledby="contacto-title">
+            <h2 class="section-title" id="contacto-title">Hablemos de tu proyecto</h2>
+            <form class="contact-form" action="#" method="post">
+                <fieldset>
+                    <legend>Datos principales</legend>
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" placeholder="nombre@dominio.com" required />
+
+                    <label for="paquete">Selecciona un paquete</label>
+                    <select id="paquete" name="paquete" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="basico">Básico</option>
+                        <option value="personalizado">Personalizado</option>
+                        <option value="experto">Experto</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles</legend>
+                    <label for="mensaje">¿Qué necesitas?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+
+                    <label class="aceptacion" for="terminos">
+                        <input id="terminos" name="terminos" type="checkbox" required />
+                        <span>Acepto la política de privacidad</span>
+                    </label>
+                </fieldset>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <small>&copy; 2025 Pseudoclases Digital. Todos los derechos reservados.</small>
+        <a href="#inicio" class="back-to-top">Volver arriba</a>
+    </footer>
+</body>
+</html>
