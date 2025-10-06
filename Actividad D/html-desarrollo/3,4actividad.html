@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Jhon.">
+    <meta name="keywords" content="HTML, formularios, tablas, accesibilidad, Visual Studio">
+    <meta name="author" content="Jhon">
+    <title>Actividad 3.4</title>
+    <link rel="stylesheet" href="styles/flexbox.css">
+</head>
+<body class="page page--portfolio">
+    <header class="page__header">
+        <h1 class="page__title" id="inicio">Portafolio de Jhon</h1>
+        <nav class="navigation navigation--primary" aria-label="Navegación principal">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#contacto">Contacto</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#blog">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#multimedia">Multimedia</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#productos">Productos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page__main portfolio">
+        <section class="module portfolio__section portfolio__section--contact" id="contacto">
+            <h2 class="portfolio__subtitle">Formulario de contacto</h2>
+            <section class="contact" aria-labelledby="contact-title">
+                <h3 class="contact__title" id="contact-title">Escríbeme</h3>
+                <form class="contact__form" action="#" method="post">
+                    <div class="contact__row">
+                        <label class="contact__label" for="portfolio-name">Nombre:</label>
+                        <input class="contact__control" type="text" id="portfolio-name" name="portfolio-name" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required>
+                    </div>
+                    <div class="contact__row">
+                        <label class="contact__label" for="portfolio-email">Correo electrónico:</label>
+                        <input class="contact__control" type="email" id="portfolio-email" name="portfolio-email" required>
+                    </div>
+                    <button class="contact__submit" type="submit">Enviar</button>
+                </form>
+            </section>
+        </section>
+
+        <section class="module portfolio__section portfolio__section--blog" id="blog">
+            <h2 class="portfolio__subtitle">Blog</h2>
+            <div class="portfolio__blog">
+                <article class="portfolio__article">
+                    <h3 class="portfolio__article-title">Mi primer proyecto</h3>
+                    <p class="portfolio__article-text">Un poco de lo que sé hacer.</p>
+                    <img class="portfolio__image" src="https://th.bing.com/th/id/R.f13cf42e96f250fe5025469f53cca2da?rik=ulgTaPVi8v8CQQ&amp;riu=http%3a%2f%2fbehstant.com%2fblog%2fwp-content%2fuploads%2f2013%2f06%2f010.png&amp;ehk=YYp0zJvwbQI18%2fpU48%2f0k9uDuAFVxF0%2b%2b29u621f%2b0g%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1" alt="Tabla con información de contacto representada gráficamente">
+                </article>
+                <aside class="portfolio__aside">
+                    <h3 class="portfolio__aside-title">Sobre mí</h3>
+                    <p class="portfolio__aside-text">Soy Jhon, apasionado por el desarrollo web y la accesibilidad.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="module portfolio__section portfolio__section--media" id="multimedia">
+            <h2 class="portfolio__subtitle">Multimedia</h2>
+            <div class="media">
+                <div class="media__group">
+                    <h3 class="media__title">Video destacado</h3>
+                    <video class="media__video" controls>
+                        <source src="videoprog.mp4" type="video/mp4">
+                        Tu navegador no soporta el video.
+                    </video>
+                </div>
+                <div class="media__group">
+                    <h3 class="media__title">Audio recomendado</h3>
+                    <audio class="media__audio" controls>
+                        <source src="audiojazz.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el audio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section class="module portfolio__section portfolio__section--products" id="productos">
+            <h2 class="portfolio__subtitle">Productos</h2>
+            <form class="products" action="#" method="post">
+                <table class="products__table records__table">
+                    <thead class="records__head">
+                        <tr class="records__row">
+                            <th class="records__header" scope="col">Producto</th>
+                            <th class="records__header" scope="col">Precio</th>
+                            <th class="records__header" scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="records__body">
+                        <tr class="records__row">
+                            <td class="records__cell">Producto 1</td>
+                            <td class="records__cell">$10</td>
+                            <td class="records__cell">
+                                <input class="products__control" type="number" min="0" max="10" step="1" name="producto-1" aria-label="Cantidad producto 1">
+                            </td>
+                        </tr>
+                        <tr class="records__row">
+                            <td class="records__cell">Producto 2</td>
+                            <td class="records__cell">$20</td>
+                            <td class="records__cell">
+                                <input class="products__control" type="number" min="0" max="10" step="1" name="producto-2" aria-label="Cantidad producto 2">
+                            </td>
+                        </tr>
+                        <tr class="records__row">
+                            <td class="records__cell">Producto 3</td>
+                            <td class="records__cell">$30</td>
+                            <td class="records__cell">
+                                <input class="products__control" type="number" min="0" max="10" step="1" name="producto-3" aria-label="Cantidad producto 3">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="records__foot">
+                        <tr class="records__row records__row--foot">
+                            <td class="records__cell records__cell--foot" colspan="3">Agrega tus productos al carrito</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button class="products__submit" type="submit">Agregar al carrito</button>
+            </form>
+        </section>
+    </main>
+    <footer class="page__footer">
+        <nav class="navigation" aria-label="Regreso al inicio">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="index.html">Volver al inicio</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

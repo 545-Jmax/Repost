@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.3</title>
+    <link rel="stylesheet" href="styles/flexbox.css">
+</head>
+<body class="page">
+    <header class="page__header">
+        <h1 class="page__title">Actividad 3.3</h1>
+    </header>
+    <main class="page__main">
+        <fieldset class="module module--contact">
+            <legend class="module__legend">Punto 4</legend>
+            <p class="module__description">Diseña una sección de contacto usando y valida el formulario para que nunca sea enviado con datos vacíos. Si requerimos número se envíe solo números, con campos máximos y mínimos definidos.</p>
+            <section class="contact" aria-labelledby="contact-title">
+                <h2 class="contact__title" id="contact-title">Título del contacto</h2>
+                <form class="contact__form" action="#" method="post">
+                    <div class="contact__row">
+                        <label class="contact__label" for="contact-name">Nombres:</label>
+                        <input class="contact__control" type="text" id="contact-name" name="contact-name" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required>
+                    </div>
+                    <div class="contact__row">
+                        <label class="contact__label" for="contact-lastname">Apellidos:</label>
+                        <input class="contact__control" type="text" id="contact-lastname" name="contact-lastname" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required>
+                    </div>
+                    <div class="contact__row">
+                        <label class="contact__label" for="contact-age">Edad:</label>
+                        <input class="contact__control" type="number" id="contact-age" name="contact-age" min="1" max="99" step="1" required>
+                    </div>
+                    <div class="contact__row">
+                        <label class="contact__label" for="contact-city">Ciudad:</label>
+                        <select class="contact__control contact__control--select" name="contact-city" id="contact-city" required>
+                            <option value="">Selecciona una ciudad</option>
+                            <option value="bucaramanga">Bucaramanga</option>
+                            <option value="giron">Girón</option>
+                        </select>
+                    </div>
+                    <button class="contact__submit" type="submit">Guardar</button>
+                </form>
+            </section>
+        </fieldset>
+
+        <fieldset class="module module--gallery">
+            <legend class="module__legend">Punto 5</legend>
+            <p class="module__description">Agrega imágenes a una página y usa el atributo <code>alt</code> para descripciones accesibles.</p>
+            <figure class="gallery">
+                <img class="gallery__image" src="https://th.bing.com/th/id/OIP.X04Jw7WrC0JJJkc5DWJs9AHaE8?w=287&amp;h=192&amp;c=7&amp;r=0&amp;o=7&amp;dpr=1.3&amp;pid=1.7&amp;rm=3" alt="Gato descansando en un campo verde" width="300" height="200">
+                <figcaption class="gallery__caption">Gato disfrutando del atardecer en el campo.</figcaption>
+            </figure>
+        </fieldset>
+
+        <fieldset class="module module--records">
+            <legend class="module__legend">Punto 6</legend>
+            <p class="module__description">Crea una tabla con <code>table</code>, <code>thead</code>, <code>tbody</code> y <code>tfoot</code> para listar los datos capturados en el formulario de contacto.</p>
+            <div class="records" role="region" aria-live="polite">
+                <table class="records__table">
+                    <thead class="records__head">
+                        <tr class="records__row">
+                            <th class="records__header" scope="col">Nombre</th>
+                            <th class="records__header" scope="col">Apellido</th>
+                            <th class="records__header" scope="col">Edad</th>
+                            <th class="records__header" scope="col">Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="records__body">
+                        <tr class="records__row">
+                            <td class="records__cell">Juan</td>
+                            <td class="records__cell">Pérez</td>
+                            <td class="records__cell">28</td>
+                            <td class="records__cell">Bucaramanga</td>
+                        </tr>
+                        <tr class="records__row">
+                            <td class="records__cell">María</td>
+                            <td class="records__cell">Gómez</td>
+                            <td class="records__cell">34</td>
+                            <td class="records__cell">Girón</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="records__foot">
+                        <tr class="records__row records__row--foot">
+                            <td class="records__cell records__cell--foot" colspan="4">Fin de la tabla</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </fieldset>
+
+        <fieldset class="module module--registration">
+            <legend class="module__legend">Punto 7 y 8</legend>
+            <p class="module__description">Diseña un formulario con controles semánticos para registrar los datos básicos de una persona. El formulario debe validarse para no enviar campos vacíos ni valores inválidos.</p>
+            <section class="registration" aria-labelledby="registration-title">
+                <h2 class="registration__title" id="registration-title">Formulario de registro</h2>
+                <form class="registration__form" action="/registro" method="post">
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__legend">Información personal</legend>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-name">Nombre:</label>
+                            <input class="registration__control" type="text" id="register-name" name="register-name" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required>
+                        </div>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-lastname">Apellidos:</label>
+                            <input class="registration__control" type="text" id="register-lastname" name="register-lastname" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required>
+                        </div>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-hobbies">Gustos:</label>
+                            <input class="registration__control" type="text" id="register-hobbies" name="register-hobbies" required>
+                        </div>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-gender">Género:</label>
+                            <select class="registration__control registration__control--select" id="register-gender" name="register-gender" required>
+                                <option value="">Seleccione...</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__legend">Información de contacto</legend>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-phone">Teléfono:</label>
+                            <input class="registration__control" type="tel" id="register-phone" name="register-phone" pattern="[0-9]{10}" title="Debe contener 10 dígitos numéricos" required>
+                        </div>
+                        <div class="registration__group">
+                            <label class="registration__label" for="register-address">Dirección:</label>
+                            <input class="registration__control" type="text" id="register-address" name="register-address" required>
+                        </div>
+                    </fieldset>
+                    <button class="registration__submit" type="submit">Enviar</button>
+                </form>
+            </section>
+        </fieldset>
+    </main>
+    <footer class="page__footer">
+        <nav class="navigation" aria-label="Enlaces secundarios">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="index.html">Volver al inicio</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
