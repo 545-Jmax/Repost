@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componentes Flexbox con BEM</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <header class="page-header" id="punto5">
+        <h2 class="layout__title">5. Encabezado de sección</h2>
+        <div class="section-header section-header--page">
+            <div class="section-header__icon" aria-hidden="true">
+                <span class="section-header__icon-emblem">⚙️</span>
+                <span class="section-header__icon-text">FlexSite</span>
+            </div>
+            <div class="section-header__content">
+                <h3 class="section-header__title">Tendencias 2025</h3>
+                <p class="section-header__subtitle">Tecnologías clave para crear experiencias digitales memorables.</p>
+            </div>
+        </div>
+    </header>
+    <main class="layout">
+        <section class="layout__section" id="punto1">
+            <h2 class="layout__title">1. Barra de navegación</h2>
+            <header class="nav-bar">
+                <div class="nav-bar__logo">FlexSite</div>
+                <nav class="nav-bar__menu" aria-label="Menú principal">
+                    <a class="nav-bar__link" href="#punto1">Punto 1</a>
+                    <a class="nav-bar__link" href="#punto2">Punto 2</a>
+                    <a class="nav-bar__link" href="#punto3">Punto 3</a>
+                    <a class="nav-bar__link" href="#punto4">Punto 4</a>
+                    <a class="nav-bar__link" href="#punto5">Punto 5</a>
+                    <a class="nav-bar__link" href="#punto6">Punto 6</a>
+                    <a class="nav-bar__link" href="#punto7">Punto 7</a>
+                    <a class="nav-bar__link" href="#punto8">Punto 8</a>
+                    <a class="nav-bar__link" href="#punto9">Punto 9</a>
+                    <a class="nav-bar__link" href="#punto10">Punto 10</a>
+                </nav>
+            </header>
+        </section>
+
+        <section class="layout__section" id="punto2">
+            <h2 class="layout__title">2. Tarjeta de producto</h2>
+            <article class="product-card">
+                <img class="product-card__image" src="assets/Gallina.jpg" alt="Gallina de Minecraft" />
+                <div class="product-card__body">
+                    <h3 class="product-card__title">Gallina de corral</h3>
+                    <p class="product-card__description">Solo es una gallina de corral, lista para darte huevos frescos cada mañana.</p>
+                    <button class="product-card__button" type="button">Añadir al corral</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="layout__section" id="punto3">
+            <h2 class="layout__title">3. Galería de imágenes</h2>
+            <section class="image-gallery" aria-label="Galería de imágenes">
+                <div class="image-gallery__list">
+                    <figure class="image-gallery__item">
+                        <img class="image-gallery__photo" src="assets/Paisajes%201.jpg" alt="Paisaje 1" />
+                        <figcaption class="image-gallery__caption">Paisaje 1</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img class="image-gallery__photo" src="assets/Paisajes%202.jpg" alt="Paisaje 2" />
+                        <figcaption class="image-gallery__caption">Paisaje 2</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img class="image-gallery__photo" src="assets/Paisajes%203.jpg" alt="Paisaje 3" />
+                        <figcaption class="image-gallery__caption">Paisaje 3</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </section>
+
+        <section class="layout__section" id="punto4">
+            <h2 class="layout__title">4. Formulario de contacto</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form__group contact-form__group--half">
+                    <label class="contact-form__label" for="nombre">Nombre</label>
+                    <input class="contact-form__input" type="text" id="nombre" name="nombre" placeholder="Nombre completo" />
+                </div>
+                <div class="contact-form__group contact-form__group--half">
+                    <label class="contact-form__label" for="email">Correo electrónico</label>
+                    <input class="contact-form__input" type="email" id="email" name="email" placeholder="correo@dominio.com" />
+                </div>
+                <div class="contact-form__actions">
+                    <button class="contact-form__button" type="submit">Enviar mensaje</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="layout__section" id="punto6">
+            <h2 class="layout__title">6. Lista de tareas</h2>
+            <ul class="task-list">
+                <li class="task-list__item">Investigación</li>
+                <li class="task-list__item">Diseño</li>
+                <li class="task-list__item">Desarrollo</li>
+                <li class="task-list__item">Pruebas</li>
+            </ul>
+        </section>
+
+        <section class="layout__section" id="punto7">
+            <h2 class="layout__title">7. Testimonial</h2>
+            <article class="testimonial">
+                <img class="testimonial__avatar" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Retrato de Albert Einstein" />
+                <div class="testimonial__content">
+                    <p class="testimonial__text">“No pretendamos que las cosas cambien si siempre hacemos lo mismo. La innovación viene de desafiar lo establecido.”</p>
+                    <p class="testimonial__author">— Albert Einstein, físico teórico</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="layout__section" id="punto8">
+            <h2 class="layout__title">8. Footer</h2>
+            <footer class="site-footer">
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Explorar</h3>
+                    <a class="site-footer__link" href="#punto1">Punto 1 · Barra de navegación</a>
+                    <a class="site-footer__link" href="#punto2">Punto 2 · Tarjeta de producto</a>
+                    <a class="site-footer__link" href="#punto3">Punto 3 · Galería</a>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Componentes</h3>
+                    <a class="site-footer__link" href="#punto4">Punto 4 · Formulario</a>
+                    <a class="site-footer__link" href="#punto5">Punto 5 · Encabezado</a>
+                    <a class="site-footer__link" href="#punto6">Punto 6 · Lista de tareas</a>
+                </div>
+                <div class="site-footer__column">
+                    <h3 class="site-footer__title">Secciones finales</h3>
+                    <a class="site-footer__link" href="#punto7">Punto 7 · Testimonial</a>
+                    <a class="site-footer__link" href="#punto8">Punto 8 · Footer</a>
+                    <a class="site-footer__link" href="#punto9">Punto 9 · Precios</a>
+                    <a class="site-footer__link" href="#punto10">Punto 10 · Sidebar</a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="layout__section" id="punto9">
+            <h2 class="layout__title">9. Sección de precios</h2>
+            <section class="pricing-section" aria-label="Tabla de precios">
+                <div class="pricing-section__cards">
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title">1 gallina</h3>
+                        <p class="pricing-card__price">$5<span class="pricing-card__period">/unidad</span></p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Alimentación básica</li>
+                            <li class="pricing-card__feature">Gallina criada en corral</li>
+                            <li class="pricing-card__feature">Entrega local</li>
+                        </ul>
+                        <button class="pricing-card__button" type="button">Añadir 1 gallina</button>
+                    </article>
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title">2 gallinas</h3>
+                        <p class="pricing-card__price">$9<span class="pricing-card__period">/par</span></p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Alimentación enriquecida</li>
+                            <li class="pricing-card__feature">Gallinas seleccionadas</li>
+                            <li class="pricing-card__feature">2 cajas de huevos frescos</li>
+                        </ul>
+                        <button class="pricing-card__button" type="button">Añadir 2 gallinas</button>
+                    </article>
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title">3 gallinas</h3>
+                        <p class="pricing-card__price">$12<span class="pricing-card__period">/lote</span></p>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">Alimentación premium</li>
+                            <li class="pricing-card__feature">Asesoría en manejo</li>
+                            <li class="pricing-card__feature">Huevos diarios asegurados</li>
+                        </ul>
+                        <button class="pricing-card__button" type="button">Añadir 3 gallinas</button>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="layout__section layout__section--sidebar" id="punto10">
+            <h2 class="layout__title">10. Sidebar de navegación</h2>
+            <button class="sidebar-toggle" type="button" aria-controls="sidebarNav" aria-expanded="true">Ocultar sidebar</button>
+            <aside class="sidebar-nav" id="sidebarNav" aria-label="Sidebar de navegación">
+                <h3 class="sidebar-nav__title">Panel</h3>
+                <nav class="sidebar-nav__menu">
+                    <a class="sidebar-nav__link" href="#punto1">Punto 1 · Barra</a>
+                    <a class="sidebar-nav__link" href="#punto2">Punto 2 · Tarjeta</a>
+                    <a class="sidebar-nav__link" href="#punto3">Punto 3 · Galería</a>
+                    <a class="sidebar-nav__link" href="#punto4">Punto 4 · Formulario</a>
+                    <a class="sidebar-nav__link" href="#punto5">Punto 5 · Encabezado</a>
+                    <a class="sidebar-nav__link" href="#punto6">Punto 6 · Lista</a>
+                    <a class="sidebar-nav__link" href="#punto7">Punto 7 · Testimonial</a>
+                    <a class="sidebar-nav__link" href="#punto8">Punto 8 · Footer</a>
+                    <a class="sidebar-nav__link" href="#punto9">Punto 9 · Precios</a>
+                    <a class="sidebar-nav__link" href="#punto10">Punto 10 · Sidebar</a>
+                </nav>
+            </aside>
+        </section>
+    </main>
+    <script>
+        const toggleButton = document.querySelector('.sidebar-toggle');
+        const sidebar = document.querySelector('.sidebar-nav');
+        const layout = document.querySelector('.layout');
+
+        if (toggleButton && sidebar && layout) {
+            toggleButton.addEventListener('click', () => {
+                const isHidden = sidebar.classList.toggle('sidebar-nav--hidden');
+                layout.classList.toggle('layout--sidebar-hidden', isHidden);
+                toggleButton.setAttribute('aria-expanded', String(!isHidden));
+                toggleButton.textContent = isHidden ? 'Mostrar sidebar' : 'Ocultar sidebar';
+            });
+        }
+    </script>
+</body>
+</html>
